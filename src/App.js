@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import WordGenerator from './Components/WordGenerator/WordGenerator';
 
 function App() {
   return (
     <div>
       Hello world
+      <WordGenerator/>
     </div>
   );
 }
