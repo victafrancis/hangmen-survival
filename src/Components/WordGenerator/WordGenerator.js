@@ -110,7 +110,7 @@ const WordGen = (props) => {
       </StyledHeader>
       <StyledInstruction>
         <StyledInstructionP>
-        One thing to do now:
+        Survive!
         <br/>
         <br/>
         Guess the word before you run out of men!
