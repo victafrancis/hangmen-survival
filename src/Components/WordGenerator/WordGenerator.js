@@ -46,7 +46,7 @@ const StyledInstructionP = styled.p`
 margin: 0 auto;
 width: 50%;
 padding-top: 0 auto;
-font-size: 40px;
+font-size: 35px;
 color: white;
 `;
 
@@ -110,10 +110,10 @@ const WordGen = (props) => {
       </StyledHeader>
       <StyledInstruction>
         <StyledInstructionP>
-        Survive!
+        You're the last hope!
         <br/>
         <br/>
-        Guess the word before you run out of men!
+        Guess the word before you run out of men. Survive and save everyone!
         </StyledInstructionP>
       </StyledInstruction>
       <WordGenDiv>
