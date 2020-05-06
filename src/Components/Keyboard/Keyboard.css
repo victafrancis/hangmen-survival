@@ -1,0 +1,13 @@
+.Keyboard {
+    margin: auto;
+    padding: 3%;
+    display: flex;
+    text-align: center;
+    height: 20%;
+    width: 40%;
+}
+
+.Output {
+    margin: auto;
+    text-align: center;
+}

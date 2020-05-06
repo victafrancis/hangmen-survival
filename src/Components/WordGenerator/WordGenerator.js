@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./WordGenerator.css"
 const WordGen = (props) => {
   const [wordsState, setWordsState] = useState({
     words: [
@@ -45,8 +45,8 @@ const WordGen = (props) => {
   };
 
   return (
-    <div>
-      <h1>Word Genertor</h1>
+    <div className="WordGenerator">
+      <h1>Word Generator</h1>
       <p>Original Word: {selectedWordState.selectedWord.word}</p>
       <p>Category: {selectedWordState.selectedWord.category} </p>
       <p>Guess the Word: {guessWordsState.guessWord} </p>
