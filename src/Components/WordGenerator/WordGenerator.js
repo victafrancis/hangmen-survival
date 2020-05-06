@@ -38,7 +38,7 @@ const WordGen = (props) => {
         word: selectedWord.word,
       },
     });
-    let guessWord = selectedWord.word.replace(/[bcdfghjklmnpqrstvwxys]/gi, "_");
+    let guessWord = selectedWord.word.replace(/[bcdfghjklmnpqrstvwxyz]/gi, "_");
     setGuessWordsState({
       guessWord: guessWord,
     });
