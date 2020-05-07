@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './LocalMatch.css';
-import WOrdGenerator from '../WordGenerator/WordGenerator';
-import Keyboard from '../Keyboard/Keyboard'
+import WordGenerator from '../WordGenerator/WordGenerator';
 
 const LocalMatch = (props) => {
 
 
   return (
     <>
-      <WOrdGenerator />
-      <Keyboard />
+      <WordGenerator />
     </>
   );
 };

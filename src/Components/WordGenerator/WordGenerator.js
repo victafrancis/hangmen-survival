@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./WordGenerator.css"
+import Keyboard from '../Keyboard/Keyboard'
+
+
 const WordGen = (props) => {
   const [wordsState, setWordsState] = useState({
     words: [
@@ -45,6 +48,7 @@ const WordGen = (props) => {
   };
 
   return (
+    <div>
     <div className="WordGenerator">
       <h1>Word Generator</h1>
       <p>Original Word: {selectedWordState.selectedWord.word}</p>
@@ -52,6 +56,9 @@ const WordGen = (props) => {
       <p>Guess the Word: {guessWordsState.guessWord} </p>
       <button onClick={guessWordHandler}>Generate</button>
     </div>
+    <Keyboard selectedWord={selectedWordState.selectedWord.word} guessWord={guessWordsState.guessWord}/>
+    </div>
+
   );
 };
 

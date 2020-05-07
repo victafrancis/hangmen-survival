@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Key from "../Key/Key";
 import "./Keyboard.css";
 
-const Keyboard = () => {
+const Keyboard = (props) => {
   const [selectedLetters, setSelectedLetters] = useState("");
   const [letters, setLetters] = useState([
     { character: "A", isClicked: false },
@@ -33,19 +33,43 @@ const Keyboard = () => {
     { character: "Y", isClicked: false },
     { character: "Z", isClicked: false },
   ]);
+  const [selectedWordState, setSelectedWordState] = useState("");
+  const [guessWordsState, setGuessWordsState] = useState("");
+  const [pointState, setPointState] = useState(0);
+
+
+   useEffect(()=>{
+      setSelectedWordState(props.selectedWord);
+   },[props.selectedWord]);
+
+   
+   useEffect(()=>{
+     let guessWord = selectedWordState.replace(/[bcdfghjklmnpqrstvwxyz]/gi, "_");
+     setGuessWordsState(guessWord);
+    },[guessWordsState])
+
 
   const keyClickHandler = (index, character) => {
     let temp = letters;
     temp[index].isClicked = true;
-
     setSelectedLetters(selectedLetters + character);
     setLetters(temp);
+    
+    // Checking if letter entered is correct then revealing it.
+    if(selectedWordState.includes(character.toLowerCase())){
+      setPointState(pointState + 1);
+    // Reveal Letter code here:
+    }else{
+    //Penalty Score?
+    }
   };
 
   return (
     <>
       <div className="Output">
         <h1>{selectedLetters}</h1>
+        <h1>{guessWordsState}</h1>
+        <h1>Points: {pointState}</h1>
       </div>
       <div className="Keyboard">
         {letters.map((value, index) => (
