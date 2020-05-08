@@ -3,5 +3,10 @@
 */
 
 .LocalMatch {
-    /* propertys here */
+    margin: auto;
+    background-color: azure;
+    padding: 2%;
+    width: 30%;
+    text-align: center;
+    margin-top: 20px;
 }
